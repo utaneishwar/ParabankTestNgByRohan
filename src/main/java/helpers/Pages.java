@@ -10,15 +10,17 @@ import manager.DriverManager;
 
 public class Pages 
 {
-	static WebDriver driver = DriverManager.getdriver();
-	public static  WebElement findElement(By by)
+	public static WebDriver driver = DriverManager.getdriver();
+	public static WebElement findElement(By by) throws Exception
 	{
-		try {
+		try 
+		{
 			return driver.findElement(by);
 		}
 		catch (Exception e) 
 		{
 			throw new NoSuchElementException(""+driver.findElement(by));
 		}
+		
 	}
 }

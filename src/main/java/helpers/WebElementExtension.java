@@ -17,17 +17,20 @@ public class WebElementExtension   // reusable methods for element
 		{
 			throw new Exception("element is not clickable");   // parent 
 		}
-		try {
+		try
+		{
 			element.click();
-		} catch (Exception e) {
-			JavascriptExecutor js =(JavascriptExecutor)DriverManager.getdriver();
+		} 
+		catch (Exception e) 
+		{
+			JavascriptExecutor js =(JavascriptExecutor)(DriverManager.getdriver());
 			js.executeScript("arguments[0].click();", element);
 		}
 		
 	}
 	public static void EnterText(WebElement element, String text) throws Exception
 	{
-		if(element==null) throw new IllegalArgumentException();
+	if(element==null) throw new IllegalArgumentException();
 		element.clear();
 		element.sendKeys(text);
 	}

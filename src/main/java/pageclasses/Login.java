@@ -1,8 +1,8 @@
 package pageclasses;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
 
 import helpers.Pages;
 import helpers.WebElementExtension;
@@ -13,13 +13,13 @@ public class Login extends Pages
 	public Login(WebDriver driver)
 	{
 		this.driver=driver;
+		
 	}
-
-	public WebElement username=findElement(By.xpath("//*[@name='username']"));
-	public	WebElement password=findElement(By.xpath("//*[@name='password']"));
-	public	WebElement login=findElement(By.xpath("(//*[@class='button'])[1]"));
-	public  WebElement LoginValiidationMsg=findElement(By.xpath("//*[@class='title']"));
-	
+	public WebElement username=driver.findElement(By.xpath("//*[@name='username']"));
+	public WebElement password=driver.findElement(By.xpath("//*[@name='password']"));
+	public WebElement login=driver.findElement(By.xpath("(//*[@class='button'])[1]"));
+	public WebElement LoginValiidationMsg=driver.findElement(By.xpath("//*[@class='title']"));
+	//*[@class='error']]
 	public void LoginAction() throws Exception 
 	{
 		WebElementExtension.EnterText(username, "Ishwar@demo");

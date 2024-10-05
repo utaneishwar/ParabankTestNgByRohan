@@ -1,27 +1,26 @@
 package manager;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeDriverInfo;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import utillity.ReadProperty;
 
-
-public class WebDriverFactory {
-	static WebDriver driver;
-	public static WebDriver CreateWebDriver(String BrowserType)
+public class WebDriverFactory 
+{
+	//static WebDriver driver;
+	
+	public static WebDriver CreateWebDriver(String BrowserType) throws Exception
 	{
+		WebDriver driver;
 		switch (BrowserType) 
 		{
 		case "Chrome":
 			driver=CreateChromeDriver();
 			break;
 		default:
-			throw new IllegalArgumentException();
+			throw new Exception("driver is not created");
 		}
 		return driver;
 	}
@@ -30,7 +29,7 @@ public class WebDriverFactory {
 	{
 		ChromeOptions Options = new ChromeOptions();
 		Options.addArguments("--start-maximized");
-		driver =new ChromeDriver(Options);
+		ChromeDriver driver = new ChromeDriver(Options);
 		return driver;
 	}
 //	public static WebDriver CreateEdgeDriver()
