@@ -30,11 +30,14 @@ public class Login extends Pages
 		return findElement(By.xpath("(//*[@class='button'])[2]")) ;//(//*[text()='Log in'])[2]
 	}
 
-	public WebElement getLoginValidationMsg() throws Exception {
-		return findElement(By.xpath("//*[@id='rightPanel']/h1")); ////*[@class='message-error validation-summary-errors']
+	public WebElement showOverView() throws Exception {
+		return findElement(By.xpath("//*[@id='showOverview']"));  ////*[@class='message-error validation-summary-errors']
 	}
-	public WebElement errortext() throws Exception {
-		return findElement(By.xpath("//*[@id='rightPanel']/child::h1/following-sibling::p")); ////*[@class='message-error validation-summary-errors']
+	public WebElement getLoginValidationMsg() throws Exception {
+		return findElement(By.xpath("(//*[@class='title'])[1]")); ////*[@class='message-error validation-summary-errors']
+	}
+	public WebElement logout() throws Exception {
+		return findElement(By.xpath("//*[text()='Log Out']")); ////*[@class='message-error validation-summary-errors']
 	}
 	//*[text()='Error!']
 	// Perform login action
