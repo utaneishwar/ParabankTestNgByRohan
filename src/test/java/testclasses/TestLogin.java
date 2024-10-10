@@ -6,14 +6,19 @@ import helpers.WebElementExtension;
 import manager.DriverManager;
 import manager.PageManager;
 
-public class TestLogin extends BaseTest
+public class TestLogin extends BaseTest  //chrome ||  https://demo.nopcommerce.com/login  
 {
 	@Test
 	public void VerifyLoginPage() throws Exception 
 	{
-		PageManager.login.LoginAction();
-	   WebElementExtension.WaitUntilELementVisible(PageManager.login.LoginValiidationMsg, DriverManager.getdriver(), 10);
+		PageManager.login.LoginAction(); 
+		//WebElementExtension.WaitUntilELementVisible(PageManager.login.getLoginValidationMsg(), DriverManager.getdriver(), 10);
 		Thread.sleep(2000);
-		//WebElementExtension.ElementContainsText(PageManager.login.LoginValiidationMsg, "ParaBank is a demo site used for demonstration of Parasoft software solutions");
+		WebElementExtension.ElementContainsText(PageManager.login.getLoginValidationMsg(), "Error!");
+		Thread.sleep(2000);
+		WebElementExtension.ElementContainsText(PageManager.login.errortext(), "An internal error has occurred and has been logged.");
+		//WebElementExtension.ElementContainsText(PageManager.login.errortext(), "bjabgan");
+
+		System.out.println("get message successfully");
 	}
 }

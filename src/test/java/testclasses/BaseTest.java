@@ -16,7 +16,7 @@ public class BaseTest
 	@BeforeTest
 	public static void Initialize() throws Exception
 	{
-		DriverManager.launchBrowser(ReadProperty.getproperrty("BrowserType"),ReadProperty.getproperrty("TestEnvUrl"));
+		DriverManager.launchBrowser(ReadProperty.getproperrty("BrowserType"), ReadProperty.getproperrty("TestEnvUrl"));
 	
 	}
 

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Oct 05 14:52:15 IST 2024</td>
+<td>Started on:</td><td>Tue Oct 08 23:29:37 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>14 seconds (14463 ms)</td>
+<tr><td>Total time:</td><td>29 seconds (29779 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,9 +76,11 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testclasses.TestLogin.VerifyLoginPage()'><b>VerifyLoginPage</b><br>Test class: testclasses.TestLogin</td>
-<td><div><pre>java.lang.ExceptionInInitializerError
-	at testclasses.TestLogin.VerifyLoginPage(TestLogin.java:14)
+<td title='testclasses.TestRegister.verifyRegister()'><b>verifyRegister</b><br>Test class: testclasses.TestRegister</td>
+<td><div><pre>java.lang.IllegalArgumentException:  element does not contains Your account was created successfully. You are now logged in. it contains If you have an account with us you can sign-up for free instant online access. You will have to provide some personal information.
+	at dev.failsafe.internal.util.Assert.isTrue(Assert.java:29)
+	at helpers.WebElementExtension.ElementContainsText(WebElementExtension.java:39)
+	at testclasses.TestRegister.verifyRegister(TestRegister.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,13 +109,11 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null
-	at pageclasses.Login.&lt;init&gt;(Login.java:18)
-	at manager.PageManager.&lt;clinit&gt;(PageManager.java:11)
-	... 29 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace576191199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace576191199'><pre>java.lang.ExceptionInInitializerError
-	at testclasses.TestLogin.VerifyLoginPage(TestLogin.java:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace33558975", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace33558975'><pre>java.lang.IllegalArgumentException:  element does not contains Your account was created successfully. You are now logged in. it contains If you have an account with us you can sign-up for free instant online access. You will have to provide some personal information.
+	at dev.failsafe.internal.util.Assert.isTrue(Assert.java:29)
+	at helpers.WebElementExtension.ElementContainsText(WebElementExtension.java:39)
+	at testclasses.TestRegister.verifyRegister(TestRegister.java:32)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -142,13 +142,9 @@ Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.seleni
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null
-	at pageclasses.Login.&lt;init&gt;(Login.java:18)
-	at manager.PageManager.&lt;clinit&gt;(PageManager.java:11)
-	... 29 more
 </pre></div></td>
-<td>0</td>
-<td>testclasses.TestLogin@f09733f</td></tr>
+<td>10</td>
+<td>testclasses.TestRegister@f09733f</td></tr>
 </table><p>
 </body>
 </html>

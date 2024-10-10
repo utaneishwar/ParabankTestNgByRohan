@@ -5,15 +5,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import utillity.ReadProperty;
-
 public class WebDriverFactory 
 {
 	//static WebDriver driver;
-	
+	public static WebDriver driver;
 	public static WebDriver CreateWebDriver(String BrowserType) throws Exception
 	{
-		WebDriver driver;
 		switch (BrowserType) 
 		{
 		case "Chrome":
@@ -29,7 +26,7 @@ public class WebDriverFactory
 	{
 		ChromeOptions Options = new ChromeOptions();
 		Options.addArguments("--start-maximized");
-		ChromeDriver driver = new ChromeDriver(Options);
+		 driver = new ChromeDriver(Options);     // remove chromedriver
 		return driver;
 	}
 //	public static WebDriver CreateEdgeDriver()
