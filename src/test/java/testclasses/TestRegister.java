@@ -12,6 +12,7 @@ public class TestRegister extends BaseTest
 	@Test
 	public void verifyRegister() throws Exception
 	{
+		
 		WebElementExtension.ClickOnElement(PageManager.register.registerlink());
 		WebElementExtension.EnterText(PageManager.register.firstname(),"ABC");
 		WebElementExtension.EnterText(PageManager.register.lastname(),"def");
@@ -21,11 +22,11 @@ public class TestRegister extends BaseTest
 		WebElementExtension.EnterText(PageManager.register.zipcode(),"442307");
 		WebElementExtension.EnterText(PageManager.register.phone(),"8975780260");
 		WebElementExtension.EnterText(PageManager.register.ssn(),"1405");
-		WebElementExtension.EnterText(PageManager.register.un(),"SIM");
+		WebElementExtension.EnterText(PageManager.register.un(),"Mona");
 		WebElementExtension.WaitUntilELementVisible(PageManager.register.un(), DriverManager.getdriver(), 10);
-		WebElementExtension.EnterText(PageManager.register.pw(),"Sim@123");
+		WebElementExtension.EnterText(PageManager.register.pw(),"Mona@123");
 		WebElementExtension.WaitUntilELementVisible(PageManager.register.pw(), DriverManager.getdriver(), 10);
-		WebElementExtension.EnterText(PageManager.register.confirm(),"Sim@123");
+		WebElementExtension.EnterText(PageManager.register.confirm(),"Mona@123");
 		Thread.sleep(2000);
 		WebElementExtension.ClickOnElement(PageManager.register.register());
 		Thread.sleep(2000);

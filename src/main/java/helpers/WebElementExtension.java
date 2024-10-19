@@ -43,5 +43,23 @@ public class WebElementExtension   // reusable methods for element
 	    WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(TimoutinSeconds));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+	// reuse 
+	static WebElement element;
+	public void ClickOnButton()throws Exception
+	{
+		if(!element.isDisplayed() || !element.isEnabled())
+		{
+			throw new Exception("element is not clickable");   // parent 
+		}
+		try
+		{
+			element.click();
+		} 
+		catch (Exception e) 
+		{
+			JavascriptExecutor js =(JavascriptExecutor)(DriverManager.getdriver());
+			js.executeScript("arguments[0].click();", element);
+		}
+		
+	}
 }

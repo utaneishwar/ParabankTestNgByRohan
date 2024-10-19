@@ -60,7 +60,7 @@ public class Register extends Pages
 //	//public WebElement registerlink=findElement(By.xpath("//*[text()='Register']"));
 //	public WebElement registerlink=findElement(By.xpath("//*[@href='register.htm;jsessionid=ABA5C78984ECAF72B8A724DACF186276']"));
 //
-//	public WebElement firstName=findElement(By.xpath("//*[@id='customer.firstName']"));
+//  public WebElement firstName=findElement(By.xpath("//*[@id='customer.firstName']"));
 //	public	WebElement lastName=findElement(By.xpath("//*[@id='customer.lastName']"));
 //	public	WebElement address=findElement(By.xpath("//*[@id='customer.address.street']"));
 //	public  WebElement city=findElement(By.xpath("//*[@id='customer.address.city']"));
@@ -69,7 +69,7 @@ public class Register extends Pages
 //	public  WebElement ssn=findElement(By.xpath("//*[@id='customer.ssn']"));
 // 	public  WebElement username=findElement(By.xpath("//*[@id='customer.username']"));
 //	public	WebElement password=findElement(By.xpath("//*[@id='customer.password']"));
-//	public	WebElement confirm=findElement(By.xpath("//*[@id='repeatedPassword']"));
+//  public	WebElement confirm=driver.findElement(By.xpath("//*[@id='repeatedPassword']"));
 	    public WebElement register() throws Exception 
 	    {
 	        return findElement(By.xpath("//*[@value='Register']")); ////*[@class='message-error validation-summary-errors']

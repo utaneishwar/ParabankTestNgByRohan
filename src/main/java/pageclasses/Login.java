@@ -1,5 +1,7 @@
 package pageclasses;
 
+import java.util.function.Supplier;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +24,7 @@ public class Login extends Pages
 	public WebElement getUsernameField() throws Exception {
 		return findElement(By.xpath("//*[@name='username']")); ////*[@id='Email']
 	}
-
+	
 	public WebElement getPasswordField() throws Exception {
 		return findElement(By.xpath("//*[@name='password']"));////*[@id='Password']
 	}
@@ -41,6 +43,7 @@ public class Login extends Pages
 	}
 	//*[text()='Error!']
 	// Perform login action
+
 	public void LoginAction() throws Exception 
 	{
 		try
